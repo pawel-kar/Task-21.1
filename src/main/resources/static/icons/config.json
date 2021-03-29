@@ -1,0 +1,70 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "f5b8e78b48e3028969a964e002daf745",
+      "css": "skype",
+      "code": 59392,
+      "src": "typicons"
+    },
+    {
+      "uid": "3315691c918224dc4893f2e368a4e0c8",
+      "css": "vimeo",
+      "code": 59393,
+      "src": "typicons"
+    },
+    {
+      "uid": "0a3e0e5caddaa9cb266e42b6495975e2",
+      "css": "pinterest-circled",
+      "code": 59394,
+      "src": "typicons"
+    },
+    {
+      "uid": "33cea6d7bd699348c0d593e105361a51",
+      "css": "facebook-circled",
+      "code": 59395,
+      "src": "typicons"
+    },
+    {
+      "uid": "d7271d490b71df4311e32cdacae8b331",
+      "css": "home",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "30b79160618d99ce798e4bd11cafe3fe",
+      "css": "food",
+      "code": 61685,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e126987944593dfee041f8e2a68145db",
+      "css": "basket",
+      "code": 59397,
+      "src": "entypo"
+    },
+    {
+      "uid": "c1d1ix1r5ldq6yl3xwvh3u3fxqale7sy",
+      "css": "home-1",
+      "code": 59398,
+      "src": "modernpics"
+    },
+    {
+      "uid": "3a230e539a4f3b904debd04c6c155034",
+      "css": "help",
+      "code": 59399,
+      "src": "entypo"
+    },
+    {
+      "uid": "44e04715aecbca7f266a17d5a7863c68",
+      "css": "plus",
+      "code": 59400,
+      "src": "fontawesome"
+    }
+  ]
+}
