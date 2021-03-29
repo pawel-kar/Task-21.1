@@ -24,7 +24,7 @@
         <tr th:action="@{/list}" th:each="product:${products}">
             <td th:text="${product.name}">Nazwa produktu</td>
             <td id="singleProductPrice" th:text="|${#numbers.formatDecimal(product.price,0,'POINT',2,'COMMA')} PLN|">Cena produktu</td>
-            <td id="category" th:text="${product.productCategory.getPolishName()}">Kategoria produktu</td>
+            <td id="category" th:text="${product.productCategory}">Kategoria produktu</td>
         </tr>
         <tr id="priceLine">
             <th colspan="3" th:text="|Całkowita cena ${totalPrice} PLN| ">Cena</th>

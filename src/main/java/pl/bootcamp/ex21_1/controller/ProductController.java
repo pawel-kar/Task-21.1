@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.bootcamp.ex21_1.model.Product;
+import pl.bootcamp.ex21_1.model.ProductCategories;
 import pl.bootcamp.ex21_1.model.ProductRepository;
+import pl.bootcamp.ex21_1.model.ProductsPriceCalculator;
 
 import java.util.List;
 
@@ -25,15 +27,15 @@ public class ProductController {
     }
 
     @GetMapping("/list")
-    public String searchProductsForGivenCategory(Model model, @RequestParam(required = false, name = "kategoria") String polishCategory) {
+    public String searchProductsForGivenCategory(Model model, @RequestParam(required = false, name = "category") ProductCategories productCategories) {
         List<Product> products;
-        if (polishCategory != null) {
-            products = productRepository.findByCategory(polishCategory);
+        if (productCategories != null) {
+            products = productRepository.findByCategory(productCategories);
         } else {
             products = productRepository.getAll();
         }
         model.addAttribute("products", products);
-        var totalPrice = productRepository.getTotalPrice(products);
+        var totalPrice = ProductsPriceCalculator.calculateTotalPrice(products);
         model.addAttribute("totalPrice", String.format("%.2f", totalPrice));
         return "list";
     }

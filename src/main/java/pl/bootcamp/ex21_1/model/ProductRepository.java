@@ -28,15 +28,9 @@ public class ProductRepository {
         productRepository.add(product);
     }
 
-    public List<Product> findByCategory(String polishCategory) {
+    public List<Product> findByCategory(ProductCategories productCategories) {
         return productRepository.stream()
-                .filter(product -> product.getProductCategory().getPolishName().equals(polishCategory))
+                .filter(product -> product.getProductCategory().equals(productCategories))
                 .collect(Collectors.toList());
-    }
-
-    public double getTotalPrice(List<Product> products) {
-        return products.stream()
-                .mapToDouble(Product::getPrice)
-                .sum();
     }
 }
