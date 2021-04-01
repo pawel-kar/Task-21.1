@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Produkty</title>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="/icons/css/fontello.css" type="text/css">
+</head>
+
+<body>
+
+<div class="menuBar">
+    <ul>
+        <li>
+            <a th:href="@{list}" id="allItems"> <i class="icon-basket"></i></a>
+            <ol>
+                <li>
+                    <a th:href="@{list?category=GROCERY}" id="foodItems"><i class="icon-food"></i></a>
+                </li>
+                <li>
+                    <a th:href="@{list?category=HOUSEHOLD}" id="householdItems"><i class="icon-home-1"></i></a>
+                </li>
+                <li>
+                    <a th:href="@{list?category=OTHER}" id="otherItems"><i class="icon-help"></i></a>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <a href="/add" id="addItem"><i class="icon-plus"></i></a>
+        </li>
+    </ul>
+</div>
+
+</body>
+
+</html>
