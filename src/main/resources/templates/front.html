@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <title>Produkty</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="/style.css" type="text/css">
     <link rel="stylesheet" href="/icons/css/fontello.css" type="text/css">
 </head>
 
@@ -13,16 +13,16 @@
 <div class="menuBar">
     <ul>
         <li>
-            <a href="/list"  id="allItems"> <i class="icon-basket"></i></a>
+            <a th:href="@{list}" id="allItems"> <i class="icon-basket"></i></a>
             <ol>
                 <li>
-                    <a href="/list?category=GROCERY" id="foodItems"><i class="icon-food"></i></a>
+                    <a th:href="@{list?category=GROCERY}" id="foodItems"><i class="icon-food"></i></a>
                 </li>
                 <li>
-                    <a href="/list?category=HOUSEHOLD" id="householdItems"><i class="icon-home-1"></i></a>
+                    <a th:href="@{list?category=HOUSEHOLD}" id="householdItems"><i class="icon-home-1"></i></a>
                 </li>
                 <li>
-                    <a href="/list?category=OTHER" id="otherItems"><i class="icon-help"></i></a>
+                    <a th:href="@{list?category=OTHER}" id="otherItems"><i class="icon-help"></i></a>
                 </li>
             </ol>
         </li>

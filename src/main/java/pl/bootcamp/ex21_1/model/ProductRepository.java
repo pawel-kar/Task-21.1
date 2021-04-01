@@ -13,11 +13,11 @@ public class ProductRepository {
 
     public ProductRepository() {
         this.productRepository = new ArrayList<>();
-        productRepository.add(new Product("Masło", 5, ProductCategories.GROCERY));
-        productRepository.add(new Product("Chleb", 10, ProductCategories.GROCERY));
-        productRepository.add(new Product("Mango", 15, ProductCategories.GROCERY));
-        productRepository.add(new Product("Odkurzacz", 150, ProductCategories.HOUSEHOLD));
-        productRepository.add(new Product("KREDKI", 15, ProductCategories.OTHER));
+        productRepository.add(new Product("Masło", 5, ProductCategory.GROCERY));
+        productRepository.add(new Product("Chleb", 10, ProductCategory.GROCERY));
+        productRepository.add(new Product("Mango", 15, ProductCategory.GROCERY));
+        productRepository.add(new Product("Odkurzacz", 150, ProductCategory.HOUSEHOLD));
+        productRepository.add(new Product("KREDKI", 15, ProductCategory.OTHER));
     }
 
     public List<Product> getAll() {
@@ -28,9 +28,9 @@ public class ProductRepository {
         productRepository.add(product);
     }
 
-    public List<Product> findByCategory(ProductCategories productCategories) {
+    public List<Product> findByCategory(ProductCategory productCategory) {
         return productRepository.stream()
-                .filter(product -> product.getProductCategory().equals(productCategories))
+                .filter(product -> product.getProductCategory().equals(productCategory))
                 .collect(Collectors.toList());
     }
 }

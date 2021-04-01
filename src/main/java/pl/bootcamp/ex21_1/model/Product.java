@@ -6,12 +6,12 @@ import java.math.RoundingMode;
 public class Product {
     private String name;
     private double price;
-    private ProductCategories productCategory;
+    private ProductCategory productCategory;
 
     public Product() {
     }
 
-    public Product(String name, double price, ProductCategories productCategory) {
+    public Product(String name, double price, ProductCategory productCategory) {
         this.name = name;
         this.price = price;
         this.productCategory = productCategory;
@@ -26,7 +26,7 @@ public class Product {
         return bd.doubleValue();
     }
 
-    public ProductCategories getProductCategory() {
+    public ProductCategory getProductCategory() {
         return productCategory;
     }
 
@@ -38,7 +38,7 @@ public class Product {
         this.price = price;
     }
 
-    public void setProductCategory(ProductCategories productCategory) {
+    public void setProductCategory(ProductCategory productCategory) {
         this.productCategory = productCategory;
     }
 }

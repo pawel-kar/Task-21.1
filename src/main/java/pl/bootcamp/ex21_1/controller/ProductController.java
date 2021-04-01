@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.bootcamp.ex21_1.model.Product;
-import pl.bootcamp.ex21_1.model.ProductCategories;
+import pl.bootcamp.ex21_1.model.ProductCategory;
 import pl.bootcamp.ex21_1.model.ProductRepository;
 import pl.bootcamp.ex21_1.model.ProductsPriceCalculator;
 
@@ -23,11 +23,11 @@ public class ProductController {
 
     @GetMapping("/")
     public String goHome() {
-        return "redirect:/front.html";
+        return "front";
     }
 
     @GetMapping("/list")
-    public String searchProductsForGivenCategory(Model model, @RequestParam(required = false, name = "category") ProductCategories productCategories) {
+    public String searchProductsForGivenCategory(Model model, @RequestParam(required = false, name = "category") ProductCategory productCategories) {
         List<Product> products;
         if (productCategories != null) {
             products = productRepository.findByCategory(productCategories);
@@ -50,6 +50,6 @@ public class ProductController {
     @PostMapping("/addProduct")
     public String add(Product product) {
         productRepository.add(product);
-        return "redirect:/front.html";
+        return "front";
     }
 }
